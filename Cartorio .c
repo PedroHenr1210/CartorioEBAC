@@ -1,4 +1,4 @@
-#include <stdio.h> //biblioteca de comunicação pelo usuario. 
+#include <stdio.h>   //Biblioteca de comunição com usuário
 #include <stdlib.h> //biblioteca de alocação de espaço e memória.
 #include <locale.h> //Biblioteca de alocação de texte por região.
 #include <string.h> //Biblioteca de string
@@ -128,6 +128,18 @@ int main()
             int opcao=0;
             int x=1;
             char senhadigitada []="a";
+            int comparacao;
+            
+            printf("Bem-Vindo ao sistema da EBAC\n\n");
+            printf("Por favor digite sua senha: ");
+            scanf("%s",senhadigitada);
+            
+            comparacao = strcmp(senhadigitada,"admin");
+            
+            if(comparacao == 0)
+          { //Inicio colchete if
+            system("cls");
+			
             for(x=1;x=1;) //Macete para repetição da função 
     
     
@@ -144,6 +156,7 @@ int main()
            printf("\t\t1ª- Registrar nomes \n" );
            printf("\t\t2ª- Consultar nomes \n" );
            printf("\t\t3ª- Deletar nomes \n" );
+           printf("\t\t4ª- Deseja sair do sistema? \n");
            printf("Opção: ");
            scanf("%d", &opcao); //scanf usa-se para escanear a escolha do usuário //%d usado para armazenar uma variável do tipo inteiro 
     
@@ -163,7 +176,11 @@ int main()
               case 3: 
 	 	      Deletar();
 		      break; 
-	
+		
+		      case 4:
+		      printf("Obrigado por usar o sistema \n");
+		      return 0;
+		      break;	
 		
 	 	     default: 
 	 	     printf("Por favor, escolha um número entre as opçoes mostradas a cima.");
@@ -173,11 +190,13 @@ int main()
 	       }  //Final do colchete de switch 
 		   
 	  } // Final do colchete de retorno 
-	
-
+	    
+   }// Final colchete IF
  
-    
+     else
+      printf("Senha incorreta, tente novamente!");
        
 }  //Final do Colchete Main 
+ 
  
  
