@@ -145,6 +145,7 @@ int main()
            printf("\t\t1ª- Registrar nomes \n" );
            printf("\t\t2ª- Consultar nomes \n" );
            printf("\t\t3ª- Deletar nomes \n" );
+           printf("\t\t4ª- Deseja sair do sistema? \n");
            printf("Opção: ");
            scanf("%d", &opcao); //scanf usa-se para escanear a escolha do usuário //%d usado para armazenar uma variável do tipo inteiro 
     
@@ -165,6 +166,10 @@ int main()
 	 	      Deletar();
 		      break; 
 		
+		      case 4:
+		      printf("Obrigado por usar o sistema \n");
+		      return 0;
+		      break;	
 		
 	 	     default: 
 	 	     printf("Por favor, escolha um número entre as opçoes mostradas a cima.");
